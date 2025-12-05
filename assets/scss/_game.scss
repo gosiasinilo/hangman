@@ -1,0 +1,87 @@
+@use "./variables" as *;
+
+#game-container {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: $bg-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 1rem;
+  font-family: $font-main;
+}
+
+#hangman-container {
+  width: 260px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hangman-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#word {
+  font-size: 2.5rem;
+  letter-spacing: 0.6rem;
+  color: $text-color;
+  margin-bottom: 1rem;
+}
+
+#letters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.keyboard-row button {
+  background: $bg-color;
+  border: 1px solid white;
+  color: white;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-family: $font-main;
+  text-transform: uppercase;
+}
+
+.keyboard-row button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+#result-container {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: $bg-color;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  #letters button {
+    width: 7vw;
+    height: 7vw;
+    font-size: 0.8rem;
+  }
+  #word {
+    font-size: 2rem;
+  }
+}
