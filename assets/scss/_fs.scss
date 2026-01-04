@@ -1,0 +1,31 @@
+@use "./variables" as *;
+
+.fs {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: $bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.fs__content {
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.fs__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fs__image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
+}

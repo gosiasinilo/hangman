@@ -1,0 +1,255 @@
+.fs {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fs__content {
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.fs__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fs__image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#game-container {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+#hangman-container {
+  width: 250px;
+  height: 320px;
+  display: flex;
+  background-color: white;
+  padding: 1rem;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+#hangman-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#word {
+  font-size: 2.5rem;
+  letter-spacing: 0.6rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+#letters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+}
+.keyboard-row button {
+  background: black;
+  border: 1px solid #444;
+  color: white;
+  width: 40px;
+  height: 40px;
+  margin: 0.35rem;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+}
+.keyboard-row button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.keyboard-row button:hover {
+  background: #444;
+  color: black;
+  transform: scale(1.3);
+}
+
+#result-container {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: black;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  #letters button {
+    width: 7vw;
+    height: 7vw;
+    font-size: 0.8rem;
+  }
+  #word {
+    font-size: 2rem;
+  }
+}
+.modal__backdrop {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #444;
+}
+
+.modal__content {
+  background: black;
+  color: #fff;
+  padding: 1em;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__content button {
+  align-self: flex-end;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: black;
+}
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  box-sizing: border-box;
+}
+.page__fullscreen {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.page__content {
+  max-width: 900px;
+  width: 100%;
+  padding: 1rem;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+}
+.page__header {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  color: #fff;
+}
+.page__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 750px;
+  margin: 30px auto 30px auto;
+  text-align: justify;
+  justify-content: center;
+  color: #fff;
+}
+.page__text ul, .page__text {
+  padding-inline-start: 20px;
+  list-style-position: inside;
+  list-style-type: none;
+  text-align: center;
+  line-height: 180%;
+}
+.page__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  margin-top: 2rem;
+}
+.page__buttons img, .page__buttons button {
+  width: 50vw;
+  max-width: 220px;
+  height: auto;
+  cursor: pointer;
+  border: #444 solid 1px;
+  border-radius: 5px;
+}
+.page__image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.page__image-rules {
+  width: 70vw;
+  max-width: 280px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .page__buttons {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .page__buttons img {
+    max-width: 220px;
+  }
+  .page__text {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

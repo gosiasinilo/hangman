@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman RULES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rammetto+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../scss/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="page__content">
+        <div class="page__image">
+          <img
+            src="../img/rules.png"
+            alt="Rules Image"
+            class="page__image-rules"
+          />
+        </div>
+
+        <ul class="page__text">
+          <li>
+            There is a hidden word on the screen with a dash for each letter
+          </li>
+          <li>
+            For example : _ _ _ _ _ for "apple" being a hidden word to guess.
+          </li>
+          <li>You call out a letter by pressing a key button.</li>
+          <br />
+          <li><span style="color: green">Correct guess:</span></li>
+          <li>
+            If the letter is in the word, it will show in all the correct blank
+            spaces.
+          </li>
+          <li><span style="color: red">Incorrect guess:</span></li>
+          <li>
+            If the letter is not in the word, it will draw one part of the
+            hangman figure. The hangman figure is made up of 10 parts - you have
+            10 incorrect guesses before the game is over.
+          </li>
+          <br />
+          <li>
+            Win by revealing all letters before the last image or lose if the
+            hangman figure is completed first.
+          </li>
+        </ul>
+
+        <div class="page__buttons">
+          <a href="game.html">
+            <img src="../img/play.png" alt="Play Game" />
+          </a>
+
+          <a href="exit.html">
+            <img src="../img/exit.png" alt="Main Menu" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

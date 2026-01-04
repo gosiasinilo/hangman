@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="../../js/game.js"></script>
+
+    <title>Hangman GAME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rammetto+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../scss/style.css" />
+  </head>
+  <body>
+    <div class="game" id="game-container">
+      <div id="game__hangman" class="hangman-container">
+        <div id="hangman-container">
+          <img id="hangman-image" src="../img/h-0.jpg" alt="Hangman" />
+        </div>
+      </div>
+      <div id="word"></div>
+      <div id="letters"></div>
+      <div id="output"></div>
+      <div
+        id="result-container"
+        style="display: none; text-align: center; padding: 20px"
+      >
+        <h1 id="result-title"></h1>
+        <p>The word was: <strong id="result-word"></strong></p>
+        <p>Do you want to play again?</p>
+        <div class="page__buttons" id="result-buttons">
+          <img src="../img/play.png" id="play-again" alt="Play Again" />
+
+          <a href="exit.html"
+            ><img src="../img/exit.png" class="pageBtn" alt="Exit"
+          /></a>
+        </div>
+      </div>
+
+      <div class="page__buttons" id="game-buttons">
+        <img
+          src="../img/rules.png"
+          id="open-modal"
+          alt="read the rules in the new window"
+        />
+        <div id="my-modal" class="modal__backdrop">
+          <div class="modal__content">
+            <button>X</button>
+            <ul class="page__text">
+              <li>
+                There is a hidden word on the screen with a dash for each letter
+              </li>
+              <li>
+                For example : _ _ _ _ _ for "apple" being a hidden word to
+                guess.
+              </li>
+              <li>You call out a letter by pressing a key button.</li>
+              <br />
+              <li><span style="color: green">Correct guess:</span></li>
+              <li>
+                If the letter is in the word, it will show in all the correct
+                blank spaces.
+              </li>
+              <li><span style="color: red">Incorrect guess:</span></li>
+              <li>
+                If the letter is not in the word, it will draw one part of the
+                hangman figure. The hangman figure is made up of 10 parts - you
+                have 10 incorrect guesses before the game is over.
+              </li>
+              <br />
+              <li>
+                Win by revealing all letters before the last image or lose if
+                the hangman figure is completed first.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="exit.html"><img src="../img/exit.png" alt="Exit" /></a>
+      </div>
+    </div>
+  </body>
+</html>
